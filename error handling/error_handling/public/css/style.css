@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+body {
+    background-color: #262529;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #343A40;
+    color: white;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    padding: 0 20px;
+    z-index: 100;
+    left: 0;
+    position:fixed;
+    background-color: #2b5a1a;
+    
+}
+
+.nav-logo {
+    height: 50px;
+    width: 100px;
+}
+
+.logo {
+    background-image: url("d8.png"); /* Replace with your logo image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 55px;
+    width: 95px;
+    margin-right: 1px;
+    padding: 0 15;
+    border: 5px solid #2b5a1a;
+    
+
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    margin-right: 40px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    /* background-color: #ff4500; */
+}
+.signup{
+    font-size: 16px;
+    font-weight: 800;
+    background-color: #DC3545;
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.895);
+    cursor: pointer;
+    padding: 9px 18px;
+    margin-left: 2px;
+    
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    
+}
+.nav-second{
+    font-size: 16px;
+    font-weight: 800;
+    background-color: #DC3545;
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.895);
+    cursor: pointer;
+    padding: 11px 20px;
+    margin-left: 900px;
+    
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    
+}
+.nav-second:hover{
+    color: #160904;
+}
+.signup:hover{
+    color: #160904;
+}
+.home:hover{
+    color: hsl(120, 9%, 4%);
+
+}
+.nav-second2:hover{
+    color: hsl(120, 9%, 4%);
+}
+.navbar-second{
+    order: 1;
+}
+.home, .nav-second2{
+    display: flex;
+    align-items: center;
+}
+
+/* .nav-links a:hover {
+    color: hsl(17, 89%, 48%);
+} */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger div {
+    width: 2rem;
+    height: 0.25rem;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+/* ... (previous CSS code) */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        background-color: #000;
+        z-index: 1;
+        
+       
+    }
+    
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+        margin-right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 2rem;
+        height: 2rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 10;
+        margin-right: 20px;
+         /* Added margin to push it to the right */
+    }
+
+    .hamburger div {
+        width: 2rem;
+        height: 0.25rem;
+        background: white;
+        border-radius: 10px;
+        transition: all 0.3s linear;
+        position: relative;
+        transform-origin: 1px;
+    }
+}
+
+@media(max-width:768){
+.slideshow-container {
+    /* max-width: 1500px; */
+    position:relative; 
+    margin: auto;
+    display: inline-flex;
+     justify-content: center; 
+    /* align-items: bottom; */
+    height: 100px;
+    margin-top: 0px;
+    width: 1500px;
+    left: 0;
+    right: 0;
+    
+  }
+}
+  
+  .mySlides {
+    display: none;
+    position: relative; /* Position relative to the navbar */
+    height: 69vh; /* 50% of the viewport height */
+    width: 100vw;
+    left: 0;
+    right: 0;
+     /* 100% of the viewport width */
+    /* object-fit: contain; */
+     /* Cover the entire area of the slide */
+}
+
+.lol {
+    
+    width: 100%; /* Cover the entire width of the slide */
+    height: 100%; /* Cover the entire height of the slide */
+    object-fit: cover; /* Maintain aspect ratio while filling slide area */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top:-40px;
+    margin-right: 4px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.7s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.prev{
+    margin-left: 1px;
+    margin-right: 4px;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #080808;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+  .search-bar {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* #searchInput {
+    padding: 8px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#searchInput:focus {
+    outline: none;
+} */
+
+button {
+    padding: 8px 15px;
+    background-color: #e84509;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #06000be3;
+}
+/* Go to Top Button Styles */
+#goToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e84509;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#goToTopBtn:hover {
+    background-color: #06000be3;
+}
+.prince {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    margin: 0;
+    
+}
+
+.clickable-box {
+    width: 500px;
+    height: 100px;
+    background-color: #363339;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 10px;
+    
+    border-radius: 70px;
+    font-size: 28px;
+}
+.clickable-box:hover{
+    color: #7cd666ed;
+}
+
+.info-box {
+    width: 400px;
+    padding: 20px;
+    border: 4px solid #967777;
+    border-radius: 30px;
+    height: 520px;
+    background-color: #566757;
+    
+    
+
+}
+
+.info-box h1, .info-box h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.info-box p {
+    margin: 2px 0;
+}
+
+.info-box button {
+    padding: 10px;
+    background-color: rgb(146, 146, 156);
+    color: white;
+    border-radius: 5px;
+}
+
+.info-box img {
+    width: 355px;
+    height: 400px;
+}
+.prince2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80vh;
+    
+}

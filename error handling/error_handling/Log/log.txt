@@ -1,0 +1,4 @@
+Query took 67 milliseconds to fetch the documents.Query took 44 milliseconds to fetch the documents.Query took 46 milliseconds to fetch the documents.Query took 40 milliseconds to fetch the documents.Query took 38 milliseconds to fetch the documents.Query took 46 milliseconds to fetch the documents.Query took 42 milliseconds to fetch the documents.A new movie document with name Riddick has been created by Prince singh
+Query took 51 milliseconds to fetch the documents.Query took 83 milliseconds to fetch the documents.A new movie document with name krish has been created by Prince singh
+Query took 48 milliseconds to fetch the documents.Query took 97 milliseconds to fetch the documents.Query took 70 milliseconds to fetch the documents.A new movie document with name krish8 has been created by Prince singh
+Query took 62 milliseconds to fetch the documents.

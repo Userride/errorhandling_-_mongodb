@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Care</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="./index.html" class="home">Home </a>
+                <a href="/contact Us.html" class="nav-second2">Contact Us</a>
+                <a href="#" class="nav-second">Login</a>
+                <a href="#" class="signup">Signup</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+    <div class="slideshow-container " >
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade" >
+          <img class="lol" src="d2.avif" >
+        </div>
+      
+        <div class="mySlides fade">
+          <img class="lol" src="d6.avif" >
+        </div>
+      
+        <div class="mySlides fade">
+          <img class="lol" src="s4.jpg" >
+        </div>
+      
+        <div class="mySlides fade">
+          <img class="lol" src="v9.webp">
+        </div>
+      
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+      <br>
+      
+      
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div>
+      <div class="prince">
+        <a href="/disease.html"  class="clickable-box" onclick="showDiseaseInfo()">Know about your disease</a>
+    </div>
+    
+      <!-- <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for your diseases...">
+        <button onclick="searchDisease()">Search</button>
+      </div> -->
+      <button onclick="goToTop()" id="goToTopBtn" title="Go to Top">&#9650;</button>
+    <!-- Your page content goes here -->
+    <div class="prince2">
+      <div class="info-box">
+        <img src="d3.avif" alt="Doctor Image">
+        <h2>Consult to Doctor</h2>
+        
+        <p>24/7 services is available.</p>
+        <button onclick="consultNow()">Consult now</button>
+        
+    </div>
+    <div class="info-box">
+      <img src="d3.avif" alt="Doctor Image">
+      <h2>Consult to Doctor</h2>
+      
+      <p>24/7 services is available.</p>
+      <button onclick="consultNow()">Consult now</button>
+      
+  </div>
+  <div class="info-box">
+    <img src="d3.avif" alt="Doctor Image">
+    <h2>Consult to Doctor</h2>
+    
+    <p>24/7 services is available.</p>
+    <button onclick="consultNow()">Consult now</button>
+    
+</div>
+    </div>
+    
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById('navLinks');
+        if (navLinks.style.display === 'none') {
+            navLinks.style.display = 'flex';
+        } else {
+            navLinks.style.display = 'none';
+        }
+    }
+    var navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                var mobileNavLinks = document.getElementById('navLinks');
+                mobileNavLinks.style.display = 'none';
+            });
+        });
+    
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 3000); 
+        }
+        
+        function searchDisease() {
+            var searchTerm = document.getElementById('searchInput').value;
+            // Perform your search logic here, e.g., redirect to a search results page or display results on the same page.
+            alert('Search for: ' + searchTerm);
+          }
+          window.onscroll = function() { scrollFunction() };
+          
+          function scrollFunction() {
+              var goToTopBtn = document.getElementById("goToTopBtn");
+          
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                  goToTopBtn.style.display = "block";
+              } else {
+                  goToTopBtn.style.display = "none";
+              }
+          }
+          function goToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        }
+        function consultNow() {
+          window.location.href = '/bmi.html';
+      }
+    </script>
+
+</body>
+</html>
